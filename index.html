@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            background-color: #ffb6c1; /* Pink pastel background */
+            color: white; /* White text */
+            text-align: center; /* Center align text */
+            font-family: Arial, sans-serif; /* Example font */
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .no-button, .yes-button {
+            cursor: pointer;
+            background-color: #ff69b4; /* Lighter pink for buttons */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        img {
+            display: block;
+            margin: 0 auto; /* Center the image */
+            max-width: 50%; /* Smaller image size */
+            background-color: transparent; /* Ensure background is transparent */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Go Out With Me?</h1>
+    
+    <!-- Image of the cute person -->
+    <img src="ask.png" alt="Cute Person" id="cutePersonImage">
+
+    <div class="button-container">
+        <!-- Yes button -->
+        <button class="yes-button" onclick="window.location.href='yay.html';">Yes</button>
+
+        <!-- No button -->
+        <button class="no-button" id="noButton">No</button>
+    </div>
+
+    <script>
+        // JavaScript for the 'No' button
+        document.getElementById('noButton').addEventListener('mouseover', function() {
+            this.style.top = Math.random() * window.innerHeight + 'px';
+            this.style.left = Math.random() * window.innerWidth + 'px';
+            this.style.position = 'absolute';
+        });
+    </script>
+
+</body>
+</html>
